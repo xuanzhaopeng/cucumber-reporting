@@ -26,7 +26,7 @@
 
         <div class="elements inner-level">
           #foreach($element in $feature.getElements())
-            #includeElement($element, false)
+            #includeElementSimple($element, false)
           #end
         </div>
 

@@ -19,6 +19,7 @@
         <powermock.version>1.6.6</powermock.version>
 
         <test.integration.pattern>**/*IntegrationTest*.java</test.integration.pattern>
+        <maven.test.skip>true</maven.test.skip>
     </properties>
 
     <parent>

@@ -24,7 +24,7 @@
       #else
         <div class="elements">
           #foreach($element in $failures)
-            #includeElement($element, true)
+            #includeElementSimple($element, true)
           #end
         </div>
       #end

@@ -60,4 +60,8 @@ public class Step implements Resultsable {
     public DocString getDocString() {
         return docString;
     }
+
+    public String getValidateName() {
+        return this.name.replaceAll("[^A-Za-z0-9]", "_").toLowerCase();
+    }
 }

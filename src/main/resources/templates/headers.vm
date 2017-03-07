@@ -25,3 +25,7 @@
 #parse("/templates/macros/json/message.vm")
 #parse("/templates/macros/json/steps.vm")
 #parse("/templates/macros/json/tags.vm")
+
+#parse("/templates/macros/json/element-simple.vm")
+#parse("/templates/macros/json/picture-message.vm")
+#parse("/templates/macros/json/steps-simple.vm")

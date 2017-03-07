@@ -1,0 +1,7 @@
+#macro(includePictureMessage, $scenarioValidateName, $stepValidateName, $scenarioKey)
+
+    #set($imagePath = $scenarioValidateName + $scenarioKey + '/' + $stepValidateName + '.png')
+    <div class="message indention">
+      <span>$imagePath</span>
+    </div>
+#end

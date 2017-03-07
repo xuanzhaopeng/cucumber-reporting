@@ -22,7 +22,7 @@
       <div class="elements">
 
         #foreach($element in $tag.getElements())
-          #includeElement($element, true)
+          #includeElementSimple($element, true)
         #end
 
       </div>

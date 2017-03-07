@@ -5,6 +5,9 @@ import org.apache.commons.lang.StringUtils;
 import net.masterthought.cucumber.json.support.Status;
 import net.masterthought.cucumber.json.support.StatusCounter;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Element {
 
     // Start: attributes from JSON file report
@@ -19,6 +22,9 @@ public class Element {
     // End: attributes from JSON file report
 
     private static final String SCENARIO_TYPE = "scenario";
+
+    private String specialKey = "";
+    private boolean isSpecialKeyChecked = false;
 
     private Status elementStatus;
     private Status beforeStatus;
@@ -83,6 +89,18 @@ public class Element {
         return feature;
     }
 
+    public String getValidateName() {
+        return getName().replaceAll("[^A-Za-z0-9]", "_").toLowerCase();
+    }
+
+    public String getSpecialKey() {
+        if(!isSpecialKeyChecked){
+            initSpecialKey();
+            isSpecialKeyChecked = true;
+        }
+        return specialKey;
+    }
+
     public void setMetaData(Feature feature) {
         this.feature = feature;
 
@@ -90,6 +108,17 @@ public class Element {
         afterStatus = calculateHookStatus(after);
         stepsStatus = calculateStepsStatus();
         elementStatus = calculateElementStatus();
+    }
+
+    private void initSpecialKey() {
+        Pattern pattern = Pattern.compile("^i set scenario key \"(.*)\"$");
+        for (int i = 0; i < steps.length; i++) {
+            Matcher matcher = pattern.matcher(steps[i].getName().toLowerCase());
+            if (matcher.matches()) {
+                specialKey = "###" + matcher.group(1);
+                break;
+            }
+        }
     }
 
     private Status calculateHookStatus(Hook[] hooks) {
