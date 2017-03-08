@@ -115,7 +115,7 @@ public class Element {
         for (int i = 0; i < steps.length; i++) {
             Matcher matcher = pattern.matcher(steps[i].getName().toLowerCase());
             if (matcher.matches()) {
-                specialKey = "###" + matcher.group(1);
+                specialKey = "---" + matcher.group(1);
                 break;
             }
         }

@@ -11,7 +11,6 @@
     #foreach($step in $element.getSteps())
       <div class="step">
         #set($isPassed = $step.getResult().getStatus().isPassed())
-        #set($isExecuted = ($step.getResult().getStatus().getRawName() == 'passed' || $step.getResult().getStatus().getRawName() == 'failed'))
         #set($uniqueId = $stepsId + '-' + $stepId)
         <div data-toggle="collapse" class="collapsed collapsable-control" data-target="#ht-cucumber-$uniqueId">
             #includeBrief($step.getKeyword(), $step.getResult().getStatus(), $step.getName(), false, $step.getResult())
@@ -19,7 +18,7 @@
 
         <div id="ht-cucumber-$uniqueId" class="collapse collapsable-details">
             #if ($step.getResult().getStatus().getRawName().equals('passed') || $step.getResult().getStatus().getRawName().equals('failed'))
-                #includePictureMessage($scenarioValidateName, $step.getValidateName(), $scenarioKey)
+                #includePictureMessage($scenarioValidateName, $step.getValidateName(), $scenarioKey, $isPassed)
             #end
             #includeMessage($step.getResult().getErrorMessageTitle(), $step.getResult().getErrorMessage(), $isPassed)
         </div>
