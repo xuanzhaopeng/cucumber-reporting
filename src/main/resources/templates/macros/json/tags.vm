@@ -4,7 +4,11 @@
   #if (!$tags.isEmpty())
     <b>Tags:</b>
     #foreach($tag in $tags)
-       <a href="$tag.getFileName()">$tag.getName()</a>
+       #if ($tag.isTestRailTag())
+         <a href="$tag.getTestRailUrl()">$tag.getName()</a>
+       #else
+         <a href="$tag.getFileName()">$tag.getName()</a>
+       #end
     #end
   #end
 </div>
