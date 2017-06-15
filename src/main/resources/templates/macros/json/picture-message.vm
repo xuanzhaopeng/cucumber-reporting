@@ -1,9 +1,9 @@
 #macro(includePictureMessage, $scenarioValidateName, $stepValidateName, $scenarioKey, $isPassed)
 
     #if ($isPassed)
-        #set($imagePath = '/job/' + $build_project_name + '/' + $build_number + '/artifact/tonight_mobile_web/screenshots/' + $scenarioValidateName + $scenarioKey + '/' + $stepValidateName + '.png')
+        #set($imagePath = '/job/' + $build_project_name + '/' + $build_number + '/artifact/' + $screen_shot_parent_folder + '/screenshots/' + $scenarioValidateName + $scenarioKey + '/' + $stepValidateName + '.png')
     #else
-        #set($imagePath = '/job/' + $build_project_name + '/' + $build_number + '/artifact/tonight_mobile_web/screenshots/' + $scenarioValidateName + $scenarioKey + '/error.png')
+        #set($imagePath = '/job/' + $build_project_name + '/' + $build_number + '/artifact/' + $screen_shot_parent_folder + '/screenshots/' + $scenarioValidateName + $scenarioKey + '/error.png')
     #end
     <div class="message indention">
       <div style='text-align:center'><img src='$imagePath' style="max-height: 500px;" /></div>

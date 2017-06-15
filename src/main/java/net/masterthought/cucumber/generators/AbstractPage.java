@@ -98,6 +98,13 @@ public abstract class AbstractPage {
         context.put("trends_present", configuration.getTrendsStatsFile() != null);
         context.put("build_project_name", configuration.getProjectName());
         context.put("build_number", configuration.getBuildNumber());
+        //TODO: Transfer the configuration from UI
+        if(configuration.getProjectName().toLowerCase().contains("biz")
+                || configuration.getProjectName().toLowerCase().contains("business")) {
+            context.put("screen_shot_parent_folder", "tonight_business_booker_admin");
+        } else {
+            context.put("screen_shot_parent_folder", "tonight_mobile_web");
+        }
 
         // if report generation fails then report is null
         String formattedTime = reportResult != null ? reportResult.getBuildTime() : ReportResult.getCurrentTime();
