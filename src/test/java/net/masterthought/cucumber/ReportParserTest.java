@@ -35,6 +35,22 @@ public class ReportParserTest extends ReportGenerator {
     }
 
     @Test
+    public void parseHTJsonResults_ReturnFeatureFiles() {
+        // given
+        initWithJSon(HT_JSON);
+        ReportParser reportParser = new ReportParser(configuration);
+
+        // when
+        List<Feature> features = reportParser.parseJsonFiles(jsonReports);
+
+        // then
+        assertThat(features).hasSize(1);
+        assertThat(features.get(0).getElements()[0].getRerun()).contains("[RERUN]");
+        assertThat(features.get(0).getElements()[1].getRerun()).isNull();
+    }
+
+
+    @Test
     public void parseJsonResults_OnNoFeatures_ThrowsException() {
 
         // given

@@ -8,7 +8,7 @@
     </div>
   #end
 
-  #includeTags($element.getTags())
+  #includeTags($element.getTags(), $element.getRerun())
 
   #set($elementId = $counter.next())
   <span data-toggle="collapse" class="collapsed collapsable-control" data-target="#element-$elementId">

@@ -1,4 +1,4 @@
-#macro(includeTags, $tags)
+#macro(includeTags, $tags, $rerun)
 
 <div class="tags indention">
   #if (!$tags.isEmpty())
@@ -11,6 +11,7 @@
        #end
     #end
   #end
+  <span style="color:red">$rerun</span>
 </div>
 
 #end

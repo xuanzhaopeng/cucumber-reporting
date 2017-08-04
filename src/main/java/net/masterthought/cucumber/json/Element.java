@@ -14,6 +14,7 @@ public class Element {
     private final String name = null;
     private final String type = null;
     private final String description = null;
+    private final String rerun = null;
     private final String keyword = null;
     private final Step[] steps = new Step[0];
     private final Hook[] before = new Hook[0];
@@ -69,6 +70,13 @@ public class Element {
         return name;
     }
 
+    public String getRerun() {
+        if (rerun == null || rerun.isEmpty()) {
+            return "";
+        }
+        return rerun;
+    }
+
     public String getKeyword() {
         return keyword;
     }
@@ -94,7 +102,7 @@ public class Element {
     }
 
     public String getSpecialKey() {
-        if(!isSpecialKeyChecked){
+        if (!isSpecialKeyChecked) {
             initSpecialKey();
             isSpecialKeyChecked = true;
         }

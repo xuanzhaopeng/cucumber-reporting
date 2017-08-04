@@ -1,0 +1,235 @@
+[
+  {
+    "uri": "features/deep_link.feature",
+    "id": "deep-link",
+    "keyword": "Feature",
+    "name": "Deep link",
+    "description": "",
+    "line": 1,
+    "elements": [
+      {
+        "id": "deep-link;(mob-868)-i-should-jump-from-receipt-page-to-menu-page;;2",
+        "keyword": "Scenario Outline",
+        "name": "(MOB-868) I should jump from receipt page to menu page",
+        "description": "",
+        "line": 11,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 3
+          },
+          {
+            "name": "@C284333",
+            "line": 3
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3463500000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I set scenario key \"t1\"",
+            "line": 11,
+            "match": {
+              "location": "features/step_definitions/common_steps.rb:107"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 198000
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/support/hooks.rb:118"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 585339000
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Given ",
+            "name": "I navigate to url \"/fr/receipt\"",
+            "line": 11,
+            "match": {
+              "location": "features/step_definitions/common_steps.rb:103"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 678201000
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/support/hooks.rb:118"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 207726000
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "I see menu page",
+            "line": 11,
+            "match": {
+              "location": "features/step_definitions/menu_page_steps.rb:18"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "\nexpected true\n     got false\n (RSpec::Expectations::ExpectationNotMetError)\n./features/step_definitions/menu_page_steps.rb:19:in `/^I see menu page$/'\nfeatures/deep_link.feature:11:in `Then I see menu page'\nfeatures/deep_link.feature:7:in `Then I see menu page'",
+              "duration": 11215192000
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/support/hooks.rb:118"
+                },
+                "result": {
+                  "status": "skipped"
+                }
+              }
+            ]
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:87"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1808102000
+            }
+          }
+        ],
+        "rerun": "[RERUN]"
+      },
+      {
+        "id": "deep-link;(mob-868)-i-should-jump-from-receipt-page-to-menu-page;;3",
+        "keyword": "Scenario Outline",
+        "name": "(MOB-868) I should jump from receipt page to menu page",
+        "description": "",
+        "line": 12,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 3
+          },
+          {
+            "name": "@C284333",
+            "line": 3
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3849866000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I set scenario key \"t2\"",
+            "line": 12,
+            "match": {
+              "location": "features/step_definitions/common_steps.rb:107"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 50000
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/support/hooks.rb:118"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 648559000
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Given ",
+            "name": "I navigate to url \"/receipt\"",
+            "line": 12,
+            "match": {
+              "location": "features/step_definitions/common_steps.rb:103"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1177447000
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/support/hooks.rb:118"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 292261000
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "I see menu page",
+            "line": 12,
+            "match": {
+              "location": "features/step_definitions/menu_page_steps.rb:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 303741000
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/support/hooks.rb:118"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 222954000
+                }
+              }
+            ]
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:87"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1892493000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

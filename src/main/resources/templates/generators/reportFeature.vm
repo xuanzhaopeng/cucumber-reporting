@@ -20,7 +20,7 @@
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
       <div class="feature">
-        #includeTags($feature.getTags())
+        #includeTags($feature.getTags(), "")
         #includeBrief($feature.getKeyword(), $feature.getStatus(), $feature.getName())
         <div class="description indention">$feature.getDescription()</div>
 
